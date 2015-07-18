@@ -28,7 +28,7 @@ gulp.task('stylesheets', function() {
   gulp.src('./css/*.scss')
     .pipe(sass({onError: function(e) { console.log(e); },
       includePaths: [
-        'css/vendor/foundation/scss'
+        'node_modules/zurb-foundation-5/scss'
       ]}))
     .pipe(prefix('last 2 versions'))
     .pipe(minifyCSS())
