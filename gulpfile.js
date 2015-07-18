@@ -37,7 +37,7 @@ gulp.task('stylesheets', function() {
 });
 
 // Watch for compile
-gulp.task('watch', function() {
+gulp.task('watch-all', function() {
   gulp.watch(['./scripts/*.js', './js/**/*.js'],[
     'lint',
     'javascript'
@@ -48,4 +48,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['javascript','stylesheets']);
-gulp.task('watch', ['watch']);
+gulp.task('watch', ['watch-all']);
