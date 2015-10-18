@@ -10,22 +10,22 @@ var gulp = require('gulp'),
 
 // JS Hint
 gulp.task('lint', function() {
-  gulp.src('./scripts/*.js')
+  gulp.src('./src/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
 // Compile and minify javascript
 gulp.task('javascript', function() {
-  gulp.src(['./js/*.js'])
+  gulp.src(['./src/js/*.js'])
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest('./build'));
+  .pipe(gulp.dest('./dist'));
 });
 
 // Compile and minify stylesheets
 gulp.task('stylesheets', function() {
-  gulp.src('./css/*.scss')
+  gulp.src('./src/css/*.scss')
     .pipe(sass({onError: function(e) { console.log(e); },
       includePaths: [
         'node_modules/zurb-foundation-5/scss'
@@ -33,16 +33,16 @@ gulp.task('stylesheets', function() {
     .pipe(prefix('last 2 versions'))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // Watch for compile
 gulp.task('watch-all', function() {
-  gulp.watch(['./scripts/*.js', './js/**/*.js'],[
+  gulp.watch(['./src/js/**/*.js'],[
     'lint',
     'javascript'
   ]);
-  gulp.watch(['./styles/*.scss', './css/**/*.scss'], [
+  gulp.watch(['./src/css/**/*.scss'], [
     'stylesheets'
   ]);
 });
