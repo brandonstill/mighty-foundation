@@ -1,0 +1,42 @@
+#! /bin/bash
+#refactor this at some point
+
+if [[ -d "node_modules/foundation-sites" && -d "node_modules/font-awesome" && -d "node_modules/motion-ui" ]]; then
+  if [[ ! -d "src/style/vendor" ]]; then
+    #copy foundation scss files
+    mkdir -p src/styles/vendor/foundation
+    cp -r node_modules/foundation-sites/scss src/styles/vendor/foundation/scss
+    #copy foundation js file
+    mkdir -p src/scripts/vendor/foundation/js
+    cp node_modules/foundation-sites/dist/foundation.min.js src/scripts/vendor/foundation/js/foundation.min.js
+    #copy font-awesome files
+    mkdir -p src/styles/vendor/font-awesome
+    cp -r node_modules/font-awesome/scss src/styles/vendor/font-awesome/scss
+    cp -r node_modules/font-awesome/fonts assets/fonts
+    #copy motion-ui scss files
+    mkdir -p src/styles/vendor/motion-ui
+    cp -r node_modules/motion-ui/src src/styles/vendor/motion-ui/src
+    #space saver
+    rm -rf node_modules/foundation-sites
+    rm -rf node_modules/motion-ui
+    rm -rf node_modules/font-awesome
+    rm -rf node_modules/jquery
+  else
+    #oops! start over
+    rm -rf src/styles/vendor
+    rm -rf src/scripts/vendor
+    rm -rf assets/dist
+    rm -rf assets/fonts
+    echo "Please re-run 'preen'"
+  fi
+else
+  #oops! start over
+  rm -rf node_modules/foundation-sites
+  rm -rf node_modules/font-awesome
+  rm -rf node_modules/jquery
+  rm -rf src/styles/vendor
+  rm -rf src/scripts/vendor
+  rm -rf assets/dist
+  rm -rf assets/fonts
+  echo "Please re-run 'npm-install --production'"
+fi
