@@ -3,6 +3,8 @@
 
 if [[ -d "node_modules/foundation-sites" && -d "node_modules/font-awesome" && -d "node_modules/motion-ui" ]]; then
   if [[ ! -d "src/style/vendor" ]]; then
+    #make assets folder
+    mkdir -p assets/
     #copy foundation scss files
     mkdir -p src/styles/vendor/foundation
     cp -r node_modules/foundation-sites/scss src/styles/vendor/foundation/scss
