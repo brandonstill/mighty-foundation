@@ -1,0 +1,60 @@
+// This should really be refactored
+
+.u-global-border-width { border-width: $global-border-width; }
+
+// Alignment: Padding
+.u-global-top-padding { 
+  padding-top: rem-calc($global-top-padding) / 2;
+  @include breakpoint(medium up) {
+    padding-top: rem-calc($global-top-padding);
+  }
+}
+.u-global-bottom-padding { 
+  padding-bottom: rem-calc($global-bottom-padding) / 2; 
+  @include breakpoint(medium up) {
+    padding-bottom: rem-calc($global-bottom-padding);
+  }
+}
+.u-global-padding {
+  @extend .u-global-top-padding;
+  @extend .u-global-bottom-padding;
+}
+
+.u-global-top-padding--half { 
+  padding-top: $global-top-padding / 4; 
+  @include breakpoint(medium up) {
+    padding-top: $global-top-padding / 2;
+  }
+}
+.u-global-bottom-padding--half { 
+  padding-bottom: $global-bottom-padding / 4; 
+  @include breakpoint(medium up) {
+    padding-bottom: $global-bottom-padding / 2; 
+  }
+}
+
+// Alignment: Margin
+.u-global-top-margin { 
+  margin-top: rem-calc($global-top-margin) / 2; 
+  @include breakpoint(medium up) {
+    margin-top: rem-calc($global-top-margin);
+  }
+}
+
+.u-global-bottom-margin { 
+  margin-bottom: rem-calc($global-bottom-margin) /2; 
+  @include breakpoint(medium up) {
+    margin-top: rem-calc($global-bottom-margin);
+  }
+}
+
+.u-globalMargin {
+  @extend .u-global-top-margin;
+  @extend .u-global-bottom-margin;
+}
+
+// Animation
+.u-global-transition { transition: $global-transition; }
+
+// Text Shadow
+.u-global-text-shadow { text-shadow: $global-text-shadow; }

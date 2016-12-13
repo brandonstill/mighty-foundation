@@ -1,0 +1,162 @@
+// ----------------------------------------------------------------------------
+// Utilities: Typography
+
+// Size
+.u-font-size--tiny { font-size: $font-size-tiny; }
+.u-font-size--small { font-size: $font-size-small; }
+.u-font-size--normal-semi { font-size: $font-size-normal-semi; }
+.u-font-size--normal { font-size: $font-size-normal; }
+.u-font-size--normal-extra { font-size: $font-size-normal-extra; }
+.u-font-size--medium-semi { font-size: $font-size-medium-semi; }
+.u-font-size--medium { font-size: $font-size-medium; }
+.u-font-size--medium-extra { font-size: $font-size-medium-extra; }
+.u-font-size--large-semi { 
+  font-size: $font-size-large-semi * .7;
+  @include breakpoint(medium up) {
+    font-size: $font-size-large-semi;
+  }
+} 
+.u-font-size--large { font-size: $font-size-large; } // $var mighty-settings.scss
+.u-font-size--xlarge { font-size: $font-size-xlarge; } // $var mighty-settings.scss
+
+// Size by %
+.u-font-percent--70 { font-size: 70%; }
+.u-font-percent--70 { font-size: 75%; }
+.u-font-percent--80 { font-size: 80%; }
+.u-font-percent--85 { font-size: 85%; }
+.u-font-percent--90 { font-size: 90%; }
+.u-font-percent--95 { font-size: 95%; }
+.u-font-percent--100 { font-size: 100%; }
+.u-font-percent--110 { font-size: 110%; }
+.u-font-percent--115 { font-size: 115%; }
+.u-font-percent--120 { font-size: 120%; }
+.u-font-percent--125 { font-size: 125%; }
+.u-font-percent--130 { font-size: 130%; }
+.u-font-percent--135 { font-size: 135%; }
+.u-font-percent--140 { font-size: 140%; }
+
+// Colors
+@mixin mighty-font-color($color, $color-shift, $color-shift-amount) {
+  @if $color-shift == 'darken' {
+    color: darken($color, $color-shift-amount);
+  } 
+  @else if $color-shift == 'lighten' {
+    color: lighten($color, $color-shift-amount);
+  }
+}
+.u-fontColor--primary { color: $primary-color; }
+.u-fontColor--secondary { color: $secondary-color; }
+.u-fontColor--tertiary { color: $tertiary-color; }
+.u-fontColor--white { color: $white; }
+
+.u-fontColor--primary { 
+  color: $primary-color;
+  &.lighten--90 { @include mighty-font-color($primary-color, lighten, 90); }
+  &.lighten--80 { @include mighty-font-color($primary-color, lighten, 80); }
+  &.lighten--70 { @include mighty-font-color($primary-color, lighten, 70); }
+  &.lighten--60 { @include mighty-font-color($primary-color, lighten, 60); }
+  &.lighten--50 { @include mighty-font-color($primary-color, lighten, 50); }
+  &.lighten--40 { @include mighty-font-color($primary-color, lighten, 40); }
+  &.lighten--30 { @include mighty-font-color($primary-color, lighten, 30); }
+  &.lighten--20 { @include mighty-font-color($primary-color, lighten, 20); }
+  &.lighten--10 { @include mighty-font-color($primary-color, darken, 10); }
+  &.darken--90 { @include mighty-font-color($primary-color, darken, 90); }
+  &.darken--80 { @include mighty-font-color($primary-color, darken, 80); }
+  &.darken--70 { @include mighty-font-color($primary-color, darken, 70); }
+  &.darken--60 { @include mighty-font-color($primary-color, darken, 60); }
+  &.darken--50 { @include mighty-font-color($primary-color, darken, 50); }
+  &.darken--40 { @include mighty-font-color($primary-color, darken, 40); }
+  &.darken--30 { @include mighty-font-color($primary-color, darken, 30); }
+  &.darken--20 { @include mighty-font-color($primary-color, darken, 20); }
+  &.darken--10 { @include mighty-font-color($primary-color, darken, 10); }
+}
+
+.u-fontColor--secondary { 
+  color: $secondary-color;
+  &.lighten--90 { @include mighty-font-color($secondary-color, lighten, 90); }
+  &.lighten--80 { @include mighty-font-color($secondary-color, lighten, 80); }
+  &.lighten--70 { @include mighty-font-color($secondary-color, lighten, 70); }
+  &.lighten--60 { @include mighty-font-color($secondary-color, lighten, 60); }
+  &.lighten--50 { @include mighty-font-color($secondary-color, lighten, 50); }
+  &.lighten--40 { @include mighty-font-color($secondary-color, lighten, 40); }
+  &.lighten--30 { @include mighty-font-color($secondary-color, lighten, 30); }
+  &.lighten--20 { @include mighty-font-color($secondary-color, lighten, 20); }
+  &.lighten--10 { @include mighty-font-color($secondary-color, darken, 10); }
+  &.darken--90 { @include mighty-font-color($secondary-color, darken, 90); }
+  &.darken--80 { @include mighty-font-color($secondary-color, darken, 80); }
+  &.darken--70 { @include mighty-font-color($secondary-color, darken, 70); }
+  &.darken--60 { @include mighty-font-color($secondary-color, darken, 60); }
+  &.darken--50 { @include mighty-font-color($secondary-color, darken, 50); }
+  &.darken--40 { @include mighty-font-color($secondary-color, darken, 40); }
+  &.darken--30 { @include mighty-font-color($secondary-color, darken, 30); }
+  &.darken--20 { @include mighty-font-color($secondary-color, darken, 20); }
+  &.darken--10 { @include mighty-font-color($secondary-color, darken, 10); }
+}
+
+.u-fontColor--tertiary { 
+  color: $tertiary-color;
+  &.lighten--90 { @include mighty-font-color($tertiary-color, lighten, 90); }
+  &.lighten--80 { @include mighty-font-color($tertiary-color, lighten, 80); }
+  &.lighten--70 { @include mighty-font-color($tertiary-color, lighten, 70); }
+  &.lighten--60 { @include mighty-font-color($tertiary-color, lighten, 60); }
+  &.lighten--50 { @include mighty-font-color($tertiary-color, lighten, 50); }
+  &.lighten--40 { @include mighty-font-color($tertiary-color, lighten, 40); }
+  &.lighten--30 { @include mighty-font-color($tertiary-color, lighten, 30); }
+  &.lighten--20 { @include mighty-font-color($tertiary-color, lighten, 20); }
+  &.lighten--10 { @include mighty-font-color($tertiary-color, darken, 10); }
+  &.darken--90 { @include mighty-font-color($tertiary-color, darken, 90); }
+  &.darken--80 { @include mighty-font-color($tertiary-color, darken, 80); }
+  &.darken--70 { @include mighty-font-color($tertiary-color, darken, 70); }
+  &.darken--60 { @include mighty-font-color($tertiary-color, darken, 60); }
+  &.darken--50 { @include mighty-font-color($tertiary-color, darken, 50); }
+  &.darken--40 { @include mighty-font-color($tertiary-color, darken, 40); }
+  &.darken--30 { @include mighty-font-color($tertiary-color, darken, 30); }
+  &.darken--20 { @include mighty-font-color($tertiary-color, darken, 20); }
+  &.darken--10 { @include mighty-font-color($tertiary-color, darken, 10); }
+}
+
+// Line Height
+.u-line-height--tiny { line-height: $line-height-tiny; }
+.u-line-height--small { line-height: $line-height-small; }
+.u-line-height--normal { line-height: $line-height-normal; }
+.u-line-height--normal-extra { line-height: $line-height-normal-extra; }
+.u-line-height--medium { line-height: $line-height-medium; }
+.u-line-height--medium-extra { line-height: $line-height-medium-extra; }
+.u-line-height--large { line-height: $line-height-large; }
+.u-line-height--xlarge { line-height: $line-height-xlarge; }
+
+// Set typography color. Defaults to white.
+@mixin mighty-font-color-decendents($color: $white,$anchor-color: $white,$color-shift: darken,$color-shift-amount: 20,$anchor-color-hover: $color) {
+  color: $color;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color;
+  }
+  a:not(.button) {
+    color: $anchor-color;
+    &:visited {
+      color: $anchor-color;
+    }
+    &:hover, &:focus {
+      @if $color-shift == 'darken' {
+        color: darken($anchor-color-hover, $color-shift-amount);
+      } 
+      @else if $color-shift == 'lighten' {
+        color: lighten($anchor-color-hover, $color-shift-amount);
+      }
+    }
+  }
+}
+
+// Set all font elements color to white
+.u-font--white { @include mighty-font-color-decendents($white, $white, darken, 14); }
+.u-font--white-secondary { @include mighty-font-color-decendents($white, $white, lighten, 32, $secondary-color); }
+.u-font--primary { @include mighty-font-color-decendents($primary-color, $primary-color, darken, 14, $primary-color); }
+.u-font--secondary { @include mighty-font-color-decendents($secondary-color, $secondary-color, darken, 14, $secondary-color); }
+.u-font--body-font { @include mighty-font-color-decendents($body-font-color, lighten($body-font-color, 30), darken, 14); }
+.u-font--primary-light { @include mighty-font-color-decendents($white, $secondary-color, darken, 14, $secondary-color); }
+
+// Text Transform
+.u-capitalize { text-transform: capitalize !important; }
+
+
+

@@ -1,0 +1,63 @@
+// -- Extended Global Variables
+
+// Colors
+$mf-primary-color: #1b2d55;
+$mf-secondary-color: darken(#20cef0, 20);
+$mf-success-color: #3adb76;
+$mf-warning-color: #ffae00;
+$mf-alert-color: #ff6243;
+
+$mf-light-gray: #e6e6e6;
+$mf-medium-gray: #cacaca;
+$mf-dark-gray: #8a8a8a;
+$mf-black: #0a0a0a;
+$mf-white: darken(#fff, 5);
+
+$tertiary-color: darken(#5de3dc, 7);
+
+// Typograpy
+$font-size-tiny: .75rem; // 12px
+$font-size-small: .8125rem; // 13px
+$font-size-normal-semi: .875rem; // 14px
+$font-size-normal: 1rem; // 16px
+$font-size-normal-extra: 1.25rem; // 20px
+$font-size-medium-semi: 1.5rem; // 24px
+$font-size-medium: 2rem; // 32px
+$font-size-medium-extra: 2.5rem; // 40px
+$font-size-large-semi: 3.25rem; // 52px
+$font-size-large: 4.5rem; // 72px
+$font-size-xlarge: 5.625rem; // 90px
+
+$line-height-tiny: .8;
+$line-height-small: .9;
+$line-height-normal: 1;
+$line-height-normal-extra: 1.1;
+$line-height-medium: 1.2;
+$line-height-medium-extra: 1.3;
+$line-height-large: 1.4;
+$line-height-xlarge: 1.6;
+
+$global-text-shadow: 0 1px .97px rgba(0,0,0,.45);
+$global-transition: all .3s ease-out;
+$global-border-width: rem-calc(2);
+$global-top-margin: 80px;
+$global-bottom-margin: 80px;
+$global-top-padding: 80px;
+$global-bottom-padding: 80px;
+
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+//$fancy-font: 'Open Sans', Helvetica, Arial, sans-serif;
+
+// Nav height
+$nav-height: 120;
+$nav-height--sm: 92;
+$nav-top-height: 120;
+$main-offset: $nav-height;
+
+// Feature Height
+$feature-height-xl: 920 - $nav-height;
+$feature-height-lg: 690 - $nav-height;
+$feature-height-md: 490 - $nav-height;
+$feature-height-sm: 320 - $nav-height;
+

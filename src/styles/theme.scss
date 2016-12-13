@@ -1,12 +1,16 @@
-@import 'settings';
+// -- Global Settings
+@import 'mighty-settings';
+@import 'foundation-settings';
 @import 'foundation';
 
-// Components
+// -- Foundation Components - comment out what you don't need
 @include foundation-global-styles;
-@include foundation-grid;
+//@include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 @include foundation-typography;
-@include foundation-button;
 @include foundation-forms;
+@include foundation-button;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-accordion;
@@ -23,6 +27,7 @@
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
+@include foundation-menu-icon;
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
@@ -38,11 +43,19 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
+// -- Additional Components
 @import 'motion-ui';
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
 @import 'font-awesome';
 
-@import 'layout/base';
+// -- Theme Components
+// Utilities
+@import 'utilities/global';
+@import 'utilities/grid';
+@import 'utilities/typography';
+
+// Components
+
+// Objects

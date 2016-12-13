@@ -1,7 +1,7 @@
 #! /bin/bash
 
 npm link gulp-eslint
-npm link gulp-browserify
+npm link gulp-include
 npm link gulp-sass
 npm link gulp-autoprefixer
 npm link gulp-clean-css
